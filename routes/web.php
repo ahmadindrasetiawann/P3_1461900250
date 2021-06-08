@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PerpustakaanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('perpustakaan', PerpustakaanController::class);
+Route::resource('tambah0250', PerpustakaanController::class);
+Route::resource('edit0250', PerpustakaanController::class);
